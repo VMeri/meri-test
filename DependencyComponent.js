@@ -4,6 +4,7 @@
   angular.module('DIApp', [])
   .controller('DICtrl', DICtrl);
 
+  DICtrl.$inject = ['$scope', '$filter', '$injector'];
   function DICtrl($scope, $filter, $injector) {
     $scope.name = "Meri";
 
