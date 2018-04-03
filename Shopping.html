@@ -13,10 +13,11 @@
       <input type="text" ng-model="shoppingList2[0].quantity"><br>
       <input type="text" ng-model="newItemName" placeholder="item name"><br>
       <input type="text" ng-model="newItemQuantity" placeholder="item quantity"><br>
+      <input type="text" ng-model="search">
       <button ng-click="addToList()">Add To List</button>
       <h3>Shopping List:</h3>
       <ul>
-        <li ng-repeat="item in shoppingList1">{{item}}</li>
+        <li ng-repeat="item in shoppingList1" | filter : search>{{item}}</li>
       </ul>
       <h3>Shopping List #2:</h3>
       <ul>
