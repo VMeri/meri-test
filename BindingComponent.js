@@ -7,11 +7,10 @@
   BindingCtrl.$inject = ['$scope'];
   function BindingCtrl($scope) {
       $scope.firstName = "Meri";
-      $scope.fullName = "";
 
 
       $scope.showNumberOfWatchers = function () {
-        console.log("# of watchers",scope.$$watchersCount);
+        console.log("# of watchers",$scope.$$watchersCount);
       };
       $scope.setFullName = function (){
         $scope.fullName = $scope.firstName + " " + "Velko";

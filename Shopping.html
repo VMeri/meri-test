@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  ng-app="ShoppingApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="ShoppingComponent.js"></script>
+    <style> body { font-size: 1.2em;}</style>
+    <title>ng-repeat</title>
+  </head>
+  <body>
+    <h1>ng-repeat</h1>
+    <div ng-controller="ShoppingCtrl">
+      <input type="text" ng-model="shoppingList2[0].quantity"><br>
+      <input type="text" ng-model="newItemName" placeholder="item name"><br>
+      <input type="text" ng-model="newItemQuantity" placeholder="item quantity"><br>
+      <button ng-click="addToList()">Add To List</button>
+      <h3>Shopping List:</h3>
+      <ul>
+        <li ng-repeat="item in shoppingList1">{{item}}</li>
+      </ul>
+      <h3>Shopping List #2:</h3>
+      <ul>
+        <li ng-repeat="item in shoppingList2">Buy {{item.quantity}} of {{item.name}}(s)</li>
+      </ul>
+      <h3>Shopping List #3:</h3>
+      <ul>
+        <li ng-repeat="item in shoppingList2">{{$index + 1}}.Buy {{item.quantity}} of {{item.name}}(s)</li>
+      </ul>
+
+    </div>
+  </body>
+</html>

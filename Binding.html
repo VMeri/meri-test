@@ -5,12 +5,20 @@
     <script src="angular.min.js"></script>
     <script src="BindingComponent.js"></script>
     <style> body { font-size: 1.2em;}</style>
-    <title>ng-repeat</title>
+    <title>1/2 way binding</title>
   </head>
   <body>
-    <h1>The Digest Cycle</h1>
+    <h1>1/2 way binding</h1>
     <div ng-controller="BindingCtrl">
+      <button ng-click="showNumberOfWatchers()">Log # of watchers</button>
+      <button ng-click="setFullName()">Set Full Name</button><br>
 
+      Full Name is: {{ :: fullName}}<br>
+      <button ng-click="logFirstName()">Log First Name</button><br>
+      <button ng-click="logFullName()">Log Full Name</button><br>
+        <div>
+          <input type="text" ng-model="firstName">
+        </div>
     </div>
   </body>
 </html>
